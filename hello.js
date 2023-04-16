@@ -298,3 +298,148 @@ if (q > 0){
 // condition ? expression_1 : expression_2
 
 !isRaining ? console.log('You need an umbrella') : console.log("You don't need an umbrella")
+
+
+// Arrays
+// Array is a collection of items in a square bracket separated by comma
+// array is ordered
+// Array can be modified
+let arr1 = ['string', 10, true, null, {skill: 'HTML'}, [1, 2, 3]]
+console.log(arr);
+console.log(typeof arr);
+let my_arr = Array()
+console.log(my_arr);
+
+// Accessing array
+let firstItem = arr1[0];
+console.log(firstItem);
+let secItem = arr1[1];
+console.log(secItem);
+let lastItem = arr1[5];
+console.log(lastItem);
+
+let lastIndex = arr1.length - 1;
+console.log(arr1[lastIndex]);
+console.log(arr1[5][1]);
+
+// lenght of an array
+console.log(arr1.length);
+
+// Modifing array
+arr1[2] = false
+console.log(arr1);
+
+let arr2 = [100, 200, 300, 400]
+
+const myNewArray = arr1.concat(arr2);
+console.log(myNewArray);
+
+// spread operator
+let [f, u, c, ...rest] = myNewArray
+console.log(f);
+console.log(c);
+console.log(rest);
+
+// Array methods slice, pop, shift, unshift, splice, reverse, sort
+
+// Slice slice(start, end)
+const myNum = [1, 2, 3, 4, 5, 6, 7]
+console.log(myNum.slice());
+console.log(myNum.slice(0,5));
+console.log(myNum.slice(1,4));
+
+myFruits = ["Mango", "Orange", "Apple", "Banana", "Grape", "Pawpaw"]
+console.log(myFruits.slice(1,4));
+console.log(myFruits);
+// pop
+myFruits.pop()
+console.log(myFruits);
+// shift
+myFruits.shift()
+console.log(myFruits);
+// unshift
+myFruits.unshift("Lemon")
+console.log(myFruits);
+// push
+myFruits.push("lime")
+console.log(myFruits);
+// reverse
+console.log(myNum.reverse());
+
+sortArr = [30, 80, 60,10, 70, 23, 20]
+console.log(sortArr);
+console.log(sortArr.sort());
+
+// Splice(start, remove_tems, add_items)
+// console.log(sortArr.splice());
+// console.log(sortArr.splice(0,3, 12, 15, 22, 60));
+// console.log(sortArr);
+console.log(sortArr.splice(0, 0, 12, 15, 22, 60));
+console.log(sortArr);
+console.log(sortArr.splice(4,3));
+
+
+
+// Loops for, while, do-while, for-of, break, continue
+// for
+// syntax
+// for(initializer, condition, increment/decrement){
+//     block of code
+// }
+
+// for (let i = 0; i <= 5; i++) {
+//     console.log(i);
+// }
+
+// for (let i = 5; i >= 0; i--) {
+//     console.log(i);
+// }
+
+// for (let i = 0; i <= 5; i++) {
+//     console.log(`${i} * ${i} = ${i * i}`);
+// }
+
+// while loop
+let i = 0;
+while (i <= 5){
+    console.log(i)
+    i++;
+}
+
+let isAuth = true
+while (isAuth){
+    console.log('You have successfully login');
+    break
+}
+
+for (let i = 0; i <= 5; i++){
+    if (i % 2 != 0 || i == 0){
+        continue;
+    }
+    console.log(i);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Functions
