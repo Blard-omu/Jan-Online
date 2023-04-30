@@ -420,6 +420,94 @@ for (let i = 0; i <= 5; i++){
 }
 
 
+// Functions // Function // Function
+console.log('///////Functions////////');
+// -Function declaration
+// -Function expression
+// -Arrow Function
+// -Higher Order Function
+
+// hoisting
+myFunction()
+// myFunctionExpression()
+
+// Function declaration
+function myFunction(){
+    // codes to be executed
+    console.log('Hello PG');
+}
+// function exampleFunction(){  }
+
+// Function Expression
+const myFunctionExpression = function(){
+    // codes to execute
+    console.log('This function expression');
+}
+
+// Arrow Function
+const myArrowFunction = ()=>{
+    // codes to execute
+    console.log('My arrow function');
+}
+
+// Calling or invoking a function
+myFunction()
+myFunctionExpression()
+myArrowFunction()
+
+
+// Functions with parameters & arguments
+function greet(firstName="stranger", lastName="Alien"){
+    console.log(`Hello ${firstName} ${lastName}`);
+}
+greet()
+greet("Blard", "PG")
+
+// return statement
+const sum = function(a, b){
+    return a + b;
+}
+console.log(sum(200,400));
+
+// Variable Scope
+
+const age = 23;
+
+function myBio(fname, lstname){
+    let age = 30;
+    console.log(`My name is ${fname} ${lstname}, I am ${age} years old`);
+}
+console.log(`My name is ${fname} , I am ${age} years old`);
+myBio("Blard", "Omu")
+
+
+// function sumAllNums(){
+//     console.log(arguments);
+// }
+// sumAllNums(1,2,3,4)
+function sumAllNums(){
+    let sum = 0
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i]
+    }
+    return sum    
+}
+
+console.log(sumAllNums(1, 2, 3, 4, 5, 6));
+
+console.log(sumAllNums(14, 59, 25, 40));
+
+
+const sumAllNums2 = (...args)=>{
+    console.log(args);
+}
+sumAllNums2(1, 2, 4, 6, 100)
+
+
+const anonymous = function(){
+    console.log("I am an anonymous function");
+}
+anonymous()
 
 
 
@@ -429,17 +517,3 @@ for (let i = 0; i <= 5; i++){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Functions
