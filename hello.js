@@ -245,6 +245,17 @@ if (q > 0){
     console.log(`You entered a wrong input value`);
 }
 
+
+const userName = "user"
+const acctBal = "$1000";
+const atmPin = "123#"
+if (userName === "user" && atmPin === "123#"){
+    console.log(`Transaction successfully! Account: ${acctBal}`);
+}else{
+    console.log("Transaction failed! You're a scammer!!");
+}
+
+
 // Switch statement
 // switch(caseValue){
 //     case 1:
@@ -334,7 +345,7 @@ let arr2 = [100, 200, 300, 400]
 const myNewArray = arr1.concat(arr2);
 console.log(myNewArray);
 
-// spread operator
+// spread/rest operator
 let [f, u, c, ...rest] = myNewArray
 console.log(f);
 console.log(c);
@@ -503,11 +514,123 @@ const sumAllNums2 = (...args)=>{
 }
 sumAllNums2(1, 2, 4, 6, 100)
 
+// const anonymous = function(){
+//     console.log("I am an anonymous function");
+// }
+// anonymous()
 
-const anonymous = function(){
-    console.log("I am an anonymous function");
+// Objects
+// objects takes in key-value pair
+const myObj = {
+    name5: 'Blard',
+    age: 100,
+    skills: ['HTML', 'CSS', 'Javascript'],
+    address: {
+        street: 'Street',
+        city: 'Lagos'
+    },
+    getDetails: function(){
+        return `My name is ${this.name5}, I am ${this.age} years old. I am proficient with ${this.skills[2]}`
+    }
 }
-anonymous()
+console.log(myObj);
+
+// Accessing object items
+// By dot-method
+console.log(myObj.name5);
+console.log(myObj.age);
+
+// By using the key
+console.log(myObj['nam5']); //Blard
+console.log(myObj['age']); //age
+const printDetails = myObj.getDetails()
+console.log(printDetails);
+
+// Object methods
+// Object.keys() is used to get the keys of an object
+const keys = Object.keys(myObj)
+console.log(keys);
+
+// object.values() is used to get the values of an object
+const values = Object.values(myObj)
+console.log(values);
+
+// Object.entries() is used to get the key-value pair of an object
+const keyValue = Object.entries(myObj)
+console.log(keyValue);
+
+// Object.assign() is used to copy an object
+const myObjcopy = Object.assign({}, myObj)
+console.log(myObjcopy);
+
+// Destructuring Objects
+const { skills, address, getDetails, name5} = myObj
+console.log(name5);
+console.log(skills);
+console.log(address);
+// console.log(getDetails);
+
+// Destructuring array
+let arr6 = [20, "Apple", true, "car"]
+let arr7 = ["Mango", false]
+// const [twenty, fruit, bool, motor] = arr6
+// console.log(twenty);
+// console.log(fruit);
+// console.log(bool);
+// console.log(motor);
+
+// rest Operator
+const [Item,...des] = arr6
+console.log(Item);
+console.log(des);
+
+// spread Operator
+let arrSpread = [...arr6, ...arr7] 
+console.log(arrSpread);
+
+// Spread operator with object
+const myObj2 = {
+    occupation: "Lawyer",
+    isMarried: true
+}
+const newObj ={...myObj, ...myObj2}
+console.log(newObj);
+
+// higher Order array methods forEach(), map(), filter(), and reduce().
+
+let scores = [10, 55, 30, 80, 96, 64]
+
+// for loop
+for(let i=0; i<scores.length; i++){
+    console.log(scores[i]);
+}
+
+console.log('/////////////////////////');
+// forEach()
+scores.forEach(score=> console.log(score * 2));
+let add = 0;
+scores.forEach(num => add += num)
+console.log(add);
+
+// map()
+const passMark = scores.map(score =>{
+    return score * 2
+})
+console.log(passMark);
+
+const classMates = ["Uthman", "PG", "Simi", "Blard"]
+const namesToLowercase = classMates.map(name => name.toLowerCase())
+console.log(namesToLowercase);
+const namesToUpper = classMates.map(name => name.toUpperCase())
+console.log(namesToUpper);
+
+// filter()
+const passScore = scores.filter(score => score >= 50)
+console.log(passScore);
+const fail = scores.filter(score => score < 40)
+console.log(fail);
+
+
 
 
 
