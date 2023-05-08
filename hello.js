@@ -630,13 +630,45 @@ console.log(passScore);
 const fail = scores.filter(score => score < 40)
 console.log(fail);
 
+// do-while
+let k = 1;
+do{
+    console.log(`${k} X ${12} = ${k * 12}`);
+    k++;
+}while(k <= 12);
+
+let marks = [1, 5, 3, 2, 7, 4, 6, 8, 10,9]
 
 
+// for-of
+for (const element of arr) {
+    // code goes here
+  }
 
+  for (const num of marks) {
+    console.log(num)
+  }
 
+  const fruits = ["Guava", "Lime", "Apple", "Pawpaw", "Banana"]
+  const country = ["Zimbabwe", "Togo", "Ghana", "Sudan", "Uk", "Spain"]
+  const changeToUpperCase = (arr) => {
+    let newCountry = []
+    for (const element of arr) {
+      newCountry.push(element.toUpperCase())
+    }
+    // console.log(newCountry.sort());
+    newCountry = newCountry.sort()
+    console.log(newCountry);
+  }
+changeToUpperCase(country)
+changeToUpperCase(fruits)
 
-
-
+// using mapping
+const newCountry = country.map((item)=>{
+    item = item.toUpperCase()
+    return item;
+})
+console.log(newCountry.sort());
 
 
 
