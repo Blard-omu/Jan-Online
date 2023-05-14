@@ -685,16 +685,63 @@ console.log(scores.sort((a, b)=> a - b));
 // Using promises
 // Using async await
 
-const url = 'https://restcountries.com/v2/all';
-fetch(url)
-    .then((response)=>response.json())
-    .then(data => {
-    console.log(data);
-    // first 10 countries
-    const numOfCountries = 10
-    const slidedData = data.slice(0, numOfCountries)
-    console.log(slidedData);
-    // get specific properties
-    slidedData.forEach(prop=>console.log(`${prop.name} ${prop.cioc} has poplation of ${prop.population}`));
- })
- .catch((error)=>{console.log(error)})
+// const url = 'https://restcountries.com/v2/all';
+// fetch(url)
+//     .then((response)=>response.json())
+//     .then(data => {
+//     console.log(data);
+//     // first 10 countries
+//     const numOfCountries = 10
+//     const slidedData = data.slice(0, numOfCountries)
+//     console.log(slidedData);
+//     // get specific properties
+//     slidedData.forEach(prop=>console.log(`${prop.name} ${prop.cioc} has poplation of ${prop.population}`));
+//  })
+//  .catch((error)=>{console.log(error)})
+
+//  selecting dom elements
+// console.log(document);
+
+// selectors
+// getElementById, getElementsByTagName, getElementsClassName, 
+// querySelector, querySelectorAll
+
+// By id
+const myTitle = document.getElementById('title');
+console.log(myTitle); //h1 element
+console.log(myTitle.innerHTML); // its content
+
+// By tagName
+const para = document.getElementsByTagName('p');
+console.log(para);
+// 
+for(let i = 0; i < para.length; i++){
+    console.log(para[i].innerHTML);
+}
+
+// By className
+const operator = document.getElementsByClassName('operator')
+console.log(operator[0]);
+
+// querySelector
+const list = document.querySelector('ul')
+console.log(list);
+const firstPara = document.querySelector('p')
+console.log(firstPara);
+const ops = document.querySelector('.operator')
+console.log(ops);
+const id = document.querySelector('#title')
+console.log(id);
+
+// querySelectorAll
+const myPara = document.querySelectorAll('p')
+console.log(myPara);
+
+for(let i = 0; i < myPara.length; i++){
+    console.log(myPara[i]);
+}
+
+const allListItems = document.querySelectorAll('li')
+console.log(allListItems[8].style.backgroundColor = 'red');
+
+
